@@ -28,6 +28,7 @@ const Menu = () => {
           <ShoppingCartIcon aria-label="Shopping Cart" />
         </S.IconWrapper>
       </S.MenuGroup>
+
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
         <S.MenuNav>

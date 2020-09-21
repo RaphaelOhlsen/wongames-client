@@ -33,7 +33,6 @@ export const Wrapper = styled.h2<HeadingProps>`
     `}
 
     ${lineLeft && wrapperModifiers.lineLeft(theme)}
-    ${lineBottom &&
-    wrapperModifiers.lineBottom(theme)}
+    ${lineBottom && wrapperModifiers.lineBottom(theme)}
   `}
 `

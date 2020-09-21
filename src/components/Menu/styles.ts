@@ -33,7 +33,7 @@ export const MenuGroup = styled.div`
     justify-content: flex-end;
     align-items: center;
 
-    > div:last-child {
+    > div {
       margin-left: ${theme.spacings.xsmall};
     }
   `}

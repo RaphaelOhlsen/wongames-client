@@ -205,13 +205,6 @@ exports[`<Footer /> should render 4 columns topics 1`] = `
           rel="noopenner, noreferrer"
           target="_blank"
         >
-          Youtube
-        </a>
-        <a
-          href="https://www.facebook.com/won-games"
-          rel="noopenner, noreferrer"
-          target="_blank"
-        >
           Facebook
         </a>
       </nav>

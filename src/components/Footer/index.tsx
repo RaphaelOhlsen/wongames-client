@@ -4,6 +4,22 @@ import Heading from 'components/Heading'
 import Logo from 'components/Logo'
 import * as S from './styles'
 
+const socialLinks = [
+  {
+    label: 'Instagran',
+    link: 'https://www.instagram.com/won-games'
+  },
+  {
+    label: 'Twitter',
+    link: 'https://www.twitter.com/won-games'
+  },
+
+  {
+    label: 'Facebook',
+    link: 'https://www.youtube.com/won-games'
+  }
+]
+
 const Footer = () => (
   <S.Wrapper>
     <Logo color="black" />
@@ -19,34 +35,16 @@ const Footer = () => (
           Follow us
         </Heading>
         <nav aria-labelledby="social media">
-          <a
-            href="https://www.instagram.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Instagran
-          </a>
-          <a
-            href="https://www.twitter.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://www.youtube.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Youtube
-          </a>
-          <a
-            href="https://www.facebook.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Facebook
-          </a>
+          {socialLinks.map(({ label, link }, index) => (
+            <a
+              key={`social-${index}`}
+              href={link}
+              target="_blank"
+              rel="noopenner, noreferrer"
+            >
+              {label}
+            </a>
+          ))}
         </nav>
       </S.Collumn>
       <S.Collumn>

@@ -25,6 +25,7 @@ describe('<Button />', () => {
 
   it('should render a large size', () => {
     renderWithTheme(<Button size="large">Buy now</Button>)
+
     expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
       height: '5rem',
       padding: '0.8rem 4.8rem',
@@ -43,7 +44,22 @@ describe('<Button />', () => {
     renderWithTheme(
       <Button icon={<AddShoppingCart data-testid="icon" />}>Buy now</Button>
     )
+
     expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
+  it('should render Button as a link', () => {
+    const { debug, container } = renderWithTheme(
+      <Button as="a" href="/link">
+        Buy now
+      </Button>
+    )
+
+    debug(container)
+
+    expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
+      'href',
+      '/link'
+    )
   })
 })

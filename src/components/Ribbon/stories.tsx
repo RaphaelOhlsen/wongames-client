@@ -6,12 +6,12 @@ export default {
   component: Ribbon,
   args: {
     children: 'Best Seller'
+  },
+  argTypes: {
+    children: {
+      type: 'string'
+    }
   }
-  // argTypes: {
-  //   children: {
-  //     type: 'string'
-  //   }
-  // }
 } as Meta
 
 export const Default: Story<RibbonProps> = (args) => (
@@ -28,5 +28,5 @@ export const Default: Story<RibbonProps> = (args) => (
 )
 
 Default.args = {
-  color: 'secondary'
+  color: 'primary'
 }

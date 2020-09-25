@@ -13,11 +13,17 @@ export default {
   }
 } as Meta
 
-export const Default: Story<HighlightProps> = (args) => <Highlight {...args} />
-// Default.args = {
-//   title: 'Read Dead está de volta!',
-//   subtitle: 'Venha conhecer as novas aventuas de John Marston',
-//   backgroundImage: '/img/red-dead-img.jpg',
-//   buttonLabel: 'Buy now',
-//   buttonLink: '/rdr2'
-// }
+export const Default: Story<HighlightProps> = (args) => (
+  <div style={{ maxWidth: '104rem' }}>
+    <Highlight {...args} />
+  </div>
+)
+
+export const WithFloatImage: Story<HighlightProps> = (args) => (
+  <div style={{ maxWidth: '104rem' }}>
+    <Highlight {...args} />
+  </div>
+)
+WithFloatImage.args = {
+  floatImage: '/img/red-dead-float.png'
+}

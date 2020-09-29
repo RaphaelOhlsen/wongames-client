@@ -11,7 +11,7 @@ export type GameCardProps = {
   developer: string
   img: string
   price: string
-  promotionalPrice: string
+  promotionalPrice?: string
 }
 
 const GameCard = ({

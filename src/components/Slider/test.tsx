@@ -5,14 +5,14 @@ import Slider from '.'
 
 describe('<Slider />', () => {
   it('should render children as slider item', () => {
-    const { debug, container } = render(
+    const { container } = render(
       <Slider settings={{ slidesToShow: 1, infinite: false }}>
         <p>Item 1</p>
         <p>Item 2</p>
       </Slider>
     )
 
-    debug()
+    // debug()
 
     expect(
       screen.getByText(/item 1/i).parentElement?.parentElement

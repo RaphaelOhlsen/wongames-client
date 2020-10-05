@@ -13,14 +13,13 @@ export const Wrapper = styled.section`
 
       li {
         background: ${theme.colors.white};
-        /* width: 1.2rem;
-        height: 1.2rem; */
+        width: 1.2rem;
+        height: 1.2rem;
         border-radius: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 ${theme.spacings.xxsmall};
-        /* cursor: pointer; */
 
         &.slick-active {
           background: ${theme.colors.primary};
@@ -29,8 +28,6 @@ export const Wrapper = styled.section`
 
       button {
         opacity: 0;
-        width: 1.2rem;
-        height: 1.2rem;
         cursor: pointer;
       }
     }
